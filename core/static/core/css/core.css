@@ -1,0 +1,10 @@
+.inline-deletelink { float: right; }
+.text.gray   { color: #767676; }
+.text.red    { color: #DB2828; }
+.text.green  { color: #21BA45; }
+.text.teal   { color: #00B5AD; }
+.text.black  { color: #1B1C1D; }
+.text.yellow { color: #FBBD08; }
+.text.blue   { color: #2185D0; }
+.text.white  { color: #FFFFFF; }
+.footer.segment { padding: 5em 0em; }

@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block stylesheet %}http://cdn.bootcss.com/semantic-ui/2.1.4/semantic.min.css{% endblock%}
+
+{% block extrahead %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{% endblock %}
+
+{% block branding %}
+  {% trans 'Site name' %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block javascript %}
+    <script src="http://cdn.bootcss.com/semantic-ui/2.0.8/semantic.min.js"></script>
+    <script type="text/javascript">
+        $('.ui.dropdown').dropdown();
+        $('.ui.accordion').accordion();
+        $('.popup').popup();
+    </script>
+{% endblock %}

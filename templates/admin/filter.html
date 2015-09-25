@@ -1,0 +1,12 @@
+{% load i18n %}
+
+<div class="ui dropdown item">
+    <i class="filter icon"></i>
+    {% blocktrans with filter_title=title|lower %} By {{ filter_title }} {% endblocktrans %}
+    <i class="dropdown icon"></i>
+    <div class="menu">
+    {% for choice in choices %}
+        <a href="{{ choice.query_string|iriencode }}" class="{% if choice.selected %} active {% endif %} item">{{ choice.display }}</a>
+    {% endfor %}
+    </div>
+</div>

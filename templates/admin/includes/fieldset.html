@@ -1,0 +1,35 @@
+{% load placehold typefield errorlist %}
+
+{% if fieldset.name %}
+<h3 class="ui header">
+    {{ fieldset.name }}
+    <div class="sub header">{{ fieldset.description|safe }}</div>
+</h3>
+{% endif %}
+
+{% for line in fieldset %}
+    <div class="field {% for field in line %} {% if field.field|is_datetime %} icon {% endif %} {% endfor %} {% if line.fields|length_is:'1' and line.errors %} error{% endif %}{% if not line.has_visible_field %} hidden{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %} {{field.field.css_classes}}{% endfor %}">
+        
+        {% for field in line %}
+            {# <div{% if not line.fields|length_is:'1' %} class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}"{% elif field.is_checkbox %} class="checkbox-row"{% endif %}> #}
+                
+                {% if field.is_checkbox %}
+                    <div class="ui checkbox">
+                        {{ field.field }} {{ field.label_tag }}
+                    </div>
+                {% else %}
+                    {{ field.label_tag }}
+                    {% if field.is_readonly %}
+                        <p>{{ field.contents }}</p>
+                    {% else %}
+                        {{ field.field|help_text_as_placeholder }}
+                    {% endif %}                
+                {% endif %}
+                
+                {% if line.errors %}
+                    {% if field.errors %}{{ line.errors|as_pointing_label }}{% endif %}
+                {% endif %}
+            {# </div> #}
+        {% endfor %}
+    </div>
+{% endfor %}

@@ -1,4 +1,5 @@
-# README #
+# django_semantic_ui
+Django admin with semantic-ui templates
 
 This project was created in order to customize the Django administrative pages with style Semanti ui.
 
@@ -6,7 +7,6 @@ This project was created in order to customize the Django administrative pages w
 
 * Quick summary
 * Version: 0.1
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
@@ -35,3 +35,4 @@ This project was created in order to customize the Django administrative pages w
 * Valberto Carneiro
 * http://valberto.com
 * valbertovc@gmail.com
+=======

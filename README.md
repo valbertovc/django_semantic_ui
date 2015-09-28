@@ -5,6 +5,7 @@ Django admin with semantic-ui templates
 This project was created in order to customize the  [Django](https://www.djangoproject.com/) admin pages with style [Semanti ui](http://semantic-ui.com/).
 
 * Project example: https://github.com/valbertovc/django_semantic_ui
+* Demo: http://djangosemanticui.valberto.com/admin
 
 ## How do I get set up django_semantic_ui? ##
 
